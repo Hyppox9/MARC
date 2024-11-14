@@ -1,7 +1,8 @@
 //
 // Created by flasque on 19/10/2024.
 //
-
+#include <stdlib.h>
+#include <stdio.h>
 #include "moves.h"
 
 /* prototypes of local functions */
@@ -152,4 +153,66 @@ void updateLocalisation(t_localisation *p_loc, t_move m)
 {
     *p_loc = move(*p_loc, m);
     return;
+}
+
+t_move proba_move(int x)
+{
+    t_move *list_moves;
+    list_moves = malloc(9*sizeof(t_move));
+    list_moves->head = NULL;
+
+    int minf10 = 1 ; int maxf10 =22;
+    int minf20 = 23 ; int maxf20 =37;
+    int minf30 = 38 ; int maxf30 =44;
+    int minb10 = 45 ; int maxb10 =51;
+    int minleft = 52 ; int maxleft =72;
+    int minright = 73 ; int maxright =93;
+    int minturn = 94 ; int maxturn = 100;
+    for (int i=0;i<9;i++)
+    {
+        int ok = 1;
+        while (ok == 1)
+        {
+            int val = rand() % 100+1;
+            switch(val)
+            {
+                case 1
+                {
+                    if (val <= maxf10)
+
+                        maxf10 = maxf10 - 1;
+                }
+                case 2
+                {
+                    (val <= maxf10)
+                }
+                case 3
+                {
+                    (val <= maxf10)
+                }
+                case 4
+                {
+                    (val <= maxf10)
+                }
+                case 5
+                {
+                    (val <= maxf10)
+                }
+                case 6
+                {
+                    (val <= maxf10)
+                }
+                case 7
+                {
+                    (val <= maxf10)
+                }
+                default
+                {
+                    ok = 0;
+                }
+
+            }
+        }
+    }
+    return list;
 }
